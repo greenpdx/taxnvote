@@ -1,0 +1,555 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.3.11
+-- Dumped by pg_dump version 9.3.11
+-- Started on 2016-02-20 08:36:41 PST
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+DROP DATABASE "tnv-budg";
+--
+-- TOC entry 2013 (class 1262 OID 16385)
+-- Name: tnv-budg; Type: DATABASE; Schema: -; Owner: -
+--
+
+CREATE DATABASE "tnv-budg" WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'en_US.UTF-8' LC_CTYPE = 'en_US.UTF-8';
+
+
+\connect "tnv-budg"
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- TOC entry 6 (class 2615 OID 2200)
+-- Name: public; Type: SCHEMA; Schema: -; Owner: -
+--
+
+CREATE SCHEMA public;
+
+
+--
+-- TOC entry 2014 (class 0 OID 0)
+-- Dependencies: 6
+-- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON SCHEMA public IS 'standard public schema';
+
+
+--
+-- TOC entry 1 (class 3079 OID 11761)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2015 (class 0 OID 0)
+-- Dependencies: 1
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 181 (class 1259 OID 16675)
+-- Name: agency_code; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE agency_code (
+    agency integer NOT NULL,
+    name character varying
+);
+
+
+--
+-- TOC entry 179 (class 1259 OID 16653)
+-- Name: ba1; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE ba1 (
+    agency_code integer,
+    agency_name character varying,
+    bureau_code integer,
+    bureau_name character varying,
+    account_code integer,
+    account_name character varying,
+    treasury_agency_code integer,
+    subfunction_code integer,
+    subfunction_title character varying,
+    bea_category character varying,
+    on_off_budget character varying,
+    y1976 integer,
+    tq integer,
+    y2016 integer,
+    y2017 integer,
+    y2018 integer,
+    y2019 integer,
+    y2020 integer,
+    y2021 integer
+);
+
+
+--
+-- TOC entry 2016 (class 0 OID 0)
+-- Dependencies: 179
+-- Name: TABLE ba1; Type: COMMENT; Schema: public; Owner: -
+--
+
+COMMENT ON TABLE ba1 IS 'budauth where y2015 not null';
+
+
+--
+-- TOC entry 180 (class 1259 OID 16665)
+-- Name: ba2; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE ba2 (
+    agency_code integer,
+    agency_name character varying,
+    bureau_code integer,
+    bureau_name character varying,
+    account_code integer,
+    account_name character varying,
+    treasury_agency_code integer,
+    subfunction_code integer,
+    subfunction_title character varying,
+    bea_category character varying,
+    on_off_budget character varying,
+    y1976 integer,
+    tq integer,
+    y2016 integer,
+    y2017 integer,
+    y2018 integer,
+    y2019 integer,
+    y2020 integer,
+    y2021 integer
+);
+
+
+--
+-- TOC entry 176 (class 1259 OID 16577)
+-- Name: bea_category; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE bea_category (
+    bea_catagory integer NOT NULL,
+    bea_name character varying NOT NULL
+);
+
+
+--
+-- TOC entry 175 (class 1259 OID 16575)
+-- Name: bea_category_bea_catagory_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE bea_category_bea_catagory_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- TOC entry 2017 (class 0 OID 0)
+-- Dependencies: 175
+-- Name: bea_category_bea_catagory_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE bea_category_bea_catagory_seq OWNED BY bea_category.bea_catagory;
+
+
+--
+-- TOC entry 171 (class 1259 OID 16386)
+-- Name: budauth; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE budauth (
+    agency_code integer,
+    agency_name character varying,
+    bureau_code integer,
+    bureau_name character varying,
+    account_code integer,
+    account_name character varying,
+    treasury_agency_code integer,
+    subfunction_code integer,
+    subfunction_title character varying,
+    bea_category character varying,
+    on_off_budget character varying,
+    y1976 integer,
+    tq integer,
+    y1977 integer,
+    y1978 integer,
+    y1979 integer,
+    y1980 integer,
+    y1981 integer,
+    y1982 integer,
+    y1983 integer,
+    y1984 integer,
+    y1985 integer,
+    y1986 integer,
+    y1987 integer,
+    y1988 integer,
+    y1989 integer,
+    y1990 integer,
+    y1991 integer,
+    y1992 integer,
+    y1993 integer,
+    y1994 integer,
+    y1995 integer,
+    y1996 integer,
+    y1997 integer,
+    y1998 integer,
+    y1999 integer,
+    y2000 integer,
+    y2001 integer,
+    y2002 integer,
+    y2003 integer,
+    y2004 integer,
+    y2005 integer,
+    y2006 integer,
+    y2007 integer,
+    y2008 integer,
+    y2009 integer,
+    y2010 integer,
+    y2011 integer,
+    y2012 integer,
+    y2013 integer,
+    y2014 integer,
+    y2015 integer,
+    y2016 integer,
+    y2017 integer,
+    y2018 integer,
+    y2019 integer,
+    y2020 integer,
+    y2021 integer
+);
+
+
+--
+-- TOC entry 178 (class 1259 OID 16606)
+-- Name: budget; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE budget (
+    budget_key integer NOT NULL,
+    name character varying NOT NULL
+);
+
+
+--
+-- TOC entry 172 (class 1259 OID 16405)
+-- Name: bureau_code; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE bureau_code (
+    agency integer NOT NULL,
+    bureau integer NOT NULL,
+    name character varying
+);
+
+
+--
+-- TOC entry 177 (class 1259 OID 16592)
+-- Name: grant; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE "grant" (
+    grant_key integer NOT NULL,
+    name character varying
+);
+
+
+--
+-- TOC entry 183 (class 1259 OID 16702)
+-- Name: o1; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE o1 (
+    agency_code integer,
+    agency_name character varying,
+    bureau_code integer,
+    bureau_name character varying,
+    account_code integer,
+    account_name character varying,
+    treasury_agency_code integer,
+    subfunction_code integer,
+    subfunction_title character varying,
+    bea_category character varying,
+    grant_split character varying,
+    on_off_budget character varying,
+    y1962 integer,
+    tq integer,
+    y2015 integer,
+    y2016 integer,
+    y2017 integer,
+    y2018 integer,
+    y2019 integer,
+    y2020 integer,
+    y2021 integer
+);
+
+
+--
+-- TOC entry 173 (class 1259 OID 16412)
+-- Name: outlay; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE outlay (
+    agency_code integer,
+    agency_name character varying,
+    bureau_code integer,
+    bureau_name character varying,
+    account_code integer,
+    account_name character varying,
+    treasury_agency_code integer,
+    subfunction_code integer,
+    subfunction_title character varying,
+    bea_category character varying,
+    grant_split character varying,
+    on_off_budget character varying,
+    y1962 integer,
+    y1963 integer,
+    y1964 integer,
+    y1965 integer,
+    y1966 integer,
+    y1967 integer,
+    y1968 integer,
+    y1969 integer,
+    y1970 integer,
+    y1971 integer,
+    y1972 integer,
+    y1973 integer,
+    y1974 integer,
+    y1975 integer,
+    y1976 integer,
+    tq integer,
+    y1977 integer,
+    y1978 integer,
+    y1979 integer,
+    y1980 integer,
+    y1981 integer,
+    y1982 integer,
+    y1983 integer,
+    y1984 integer,
+    y1985 integer,
+    y1986 integer,
+    y1987 integer,
+    y1988 integer,
+    y1989 integer,
+    y1990 integer,
+    y1991 integer,
+    y1992 integer,
+    y1993 integer,
+    y1994 integer,
+    y1995 integer,
+    y1996 integer,
+    y1997 integer,
+    y1998 integer,
+    y1999 integer,
+    y2000 integer,
+    y2001 integer,
+    y2002 integer,
+    y2003 integer,
+    y2004 integer,
+    y2005 integer,
+    y2006 integer,
+    y2007 integer,
+    y2008 integer,
+    y2009 integer,
+    y2010 integer,
+    y2011 integer,
+    y2012 integer,
+    y2013 integer,
+    y2014 integer,
+    y2015 integer,
+    y2016 integer,
+    y2017 integer,
+    y2018 integer,
+    y2019 integer,
+    y2020 integer,
+    y2021 integer
+);
+
+
+--
+-- TOC entry 174 (class 1259 OID 16424)
+-- Name: reciept; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE reciept (
+    source_category_code integer,
+    source_category_name character varying,
+    source_subcategory integer,
+    source_subcategory_name character varying,
+    agency_code integer,
+    agency_name character varying,
+    bureau_code integer,
+    bureau_name character varying,
+    account_code integer,
+    account_name character varying,
+    treasury_agency_code integer,
+    on_off_budget character varying,
+    y1962 integer,
+    y1963 integer,
+    y1964 integer,
+    y1965 integer,
+    y1966 integer,
+    y1967 integer,
+    y1968 integer,
+    y1969 integer,
+    y1970 integer,
+    y1971 integer,
+    y1972 integer,
+    y1973 integer,
+    y1974 integer,
+    y1975 integer,
+    y1976 integer,
+    tq integer,
+    y1977 integer,
+    y1978 integer,
+    y1979 integer,
+    y1980 integer,
+    y1981 integer,
+    y1982 integer,
+    y1983 integer,
+    y1984 integer,
+    y1985 integer,
+    y1986 integer,
+    y1987 integer,
+    y1988 integer,
+    y1989 integer,
+    y1990 integer,
+    y1991 integer,
+    y1992 integer,
+    y1993 integer,
+    y1994 integer,
+    y1995 integer,
+    y1996 integer,
+    y1997 integer,
+    y1998 integer,
+    y1999 bigint,
+    y2000 bigint,
+    y2001 bigint,
+    y2002 bigint,
+    y2003 bigint,
+    y2004 bigint,
+    y2005 bigint,
+    y2006 bigint,
+    y2007 bigint,
+    y2008 bigint,
+    y2009 bigint,
+    y2010 bigint,
+    y2011 bigint,
+    y2012 bigint,
+    y2013 bigint,
+    y2014 bigint,
+    y2015 bigint,
+    y2016 bigint,
+    y2017 bigint,
+    y2018 bigint,
+    y2019 bigint,
+    y2020 bigint,
+    y2021 bigint
+);
+
+
+--
+-- TOC entry 182 (class 1259 OID 16693)
+-- Name: subfunc_code; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE subfunc_code (
+    key_subfunc integer NOT NULL,
+    name character varying,
+    info text
+);
+
+
+--
+-- TOC entry 1889 (class 2604 OID 16580)
+-- Name: bea_catagory; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY bea_category ALTER COLUMN bea_catagory SET DEFAULT nextval('bea_category_bea_catagory_seq'::regclass);
+
+
+--
+-- TOC entry 1893 (class 2606 OID 16585)
+-- Name: bea_category_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY bea_category
+    ADD CONSTRAINT bea_category_pkey PRIMARY KEY (bea_catagory);
+
+
+--
+-- TOC entry 1897 (class 2606 OID 16613)
+-- Name: budget_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY budget
+    ADD CONSTRAINT budget_pkey PRIMARY KEY (budget_key);
+
+
+--
+-- TOC entry 1895 (class 2606 OID 16599)
+-- Name: grant_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY "grant"
+    ADD CONSTRAINT grant_pkey PRIMARY KEY (grant_key);
+
+
+--
+-- TOC entry 1899 (class 2606 OID 16682)
+-- Name: key_agency; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY agency_code
+    ADD CONSTRAINT key_agency PRIMARY KEY (agency);
+
+
+--
+-- TOC entry 1891 (class 2606 OID 16684)
+-- Name: key_bureau; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY bureau_code
+    ADD CONSTRAINT key_bureau PRIMARY KEY (agency, bureau);
+
+
+--
+-- TOC entry 1901 (class 2606 OID 16700)
+-- Name: subfunc_code_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY subfunc_code
+    ADD CONSTRAINT subfunc_code_pkey PRIMARY KEY (key_subfunc);
+
+
+-- Completed on 2016-02-20 08:36:42 PST
+
+--
+-- PostgreSQL database dump complete
+--
+
