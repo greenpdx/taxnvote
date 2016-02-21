@@ -15,6 +15,7 @@ indent_mode=2
 [project]
 name=taxnvote
 base_path=/home/savages/Documents/taxnvote
+description=
 
 [long line marker]
 long_line_behaviour=1
@@ -22,13 +23,13 @@ long_line_column=72
 
 [files]
 current_page=6
-FILE_NAME_0=0;HTML;0;EUTF-8;1;1;0;%2Fhome%2Fsavages%2FDocuments%2Ftaxnvote%2Fwebsite%2Findex.html;0;4
-FILE_NAME_1=2701;HTML;0;EUTF-8;1;1;0;%2Fhome%2Fsavages%2FDocuments%2Ftaxnvote%2Fwebsite%2Fvote.html;0;4
-FILE_NAME_2=4280;CSS;0;EUTF-8;1;1;0;%2Fhome%2Fsavages%2FDocuments%2Ftaxnvote%2Fwebsite%2Fassets%2Fcss%2Fmain.css;0;4
-FILE_NAME_3=586;Javascript;0;EUTF-8;1;1;0;%2Fhome%2Fsavages%2FDocuments%2Ftaxnvote%2Fwebsite%2Fvote.js;0;4
-FILE_NAME_4=111;Javascript;0;EUTF-8;1;1;0;%2Fhome%2Fsavages%2FDocuments%2Ftaxnvote%2Fagency.js;0;4
-FILE_NAME_5=0;HTML;0;EUTF-8;1;1;0;%2Fhome%2Fsavages%2FDocuments%2Ftaxnvote%2Fwebsite%2Fresult.html;0;4
-FILE_NAME_6=0;HTML;0;EUTF-8;1;1;0;%2Fhome%2Fsavages%2FDocuments%2Ftaxnvote%2Fwebsite%2Fabout.html;0;4
+FILE_NAME_0=3789;HTML;0;EUTF-8;1;1;0;%2Fhome%2Fsavages%2FDocuments%2Ftaxnvote%2Fwebsite%2Findex.html;0;4
+FILE_NAME_1=4280;CSS;0;EUTF-8;1;1;0;%2Fhome%2Fsavages%2FDocuments%2Ftaxnvote%2Fwebsite%2Fassets%2Fcss%2Fmain.css;0;4
+FILE_NAME_2=1671;Javascript;0;EUTF-8;1;1;0;%2Fhome%2Fsavages%2FDocuments%2Ftaxnvote%2Fwebsite%2Fvote.js;0;4
+FILE_NAME_3=362;HTML;0;EUTF-8;1;1;0;%2Fhome%2Fsavages%2FDocuments%2Ftaxnvote%2Fwebsite%2Fresult.html;0;4
+FILE_NAME_4=362;HTML;0;EUTF-8;1;1;0;%2Fhome%2Fsavages%2FDocuments%2Ftaxnvote%2Fwebsite%2Fabout.html;0;4
+FILE_NAME_5=362;HTML;0;EUTF-8;1;1;0;%2Fhome%2Fsavages%2FDocuments%2Ftaxnvote%2Fwebsite%2Fdonate.html;0;4
+FILE_NAME_6=2975;HTML;0;EUTF-8;1;1;0;%2Fhome%2Fsavages%2FDocuments%2Ftaxnvote%2Fwebsite%2Fvote.html;0;4
 
 [VTE]
 last_dir=/home/savages

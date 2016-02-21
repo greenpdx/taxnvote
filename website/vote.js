@@ -1,6 +1,10 @@
 /*
  */
 
+function buildTree() {
+	
+}
+
 function initChart() {	
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawCharts);
@@ -71,4 +75,20 @@ function voteChart() {
 	chart.draw(vote, voteOpts);
 }
 
+jQuery('#agencytable').gtreetable({
+  'source': function (id) {
+      return {
+        type: 'GET',
+        url: 'nodeChildren',
+        data: { 'id': id },        
+        dataType: 'json',
+        error: function(XMLHttpRequest) {
+          alert(XMLHttpRequest.status+': '+XMLHttpRequest.responseText);
+        }
+      }
+    }
+});
+
 initChart();
+
+buildTree();

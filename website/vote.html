@@ -92,17 +92,23 @@
 					</div>
 			</div><!-- row -->
 				<ul class="nav nav-tabs nav-justified">
-					<li class="active"><a data-toggle="tab" href="#cc">Congress Committee</a></li>
-					<li><a data-toggle="tab" href="#dept">Department</a></li>
-					<li><a data-toggle="tab" href="#numb">Number</a></li>
+					<li class="active"><a data-toggle="tab" href="#cc">Vote by Agency</a></li>
+					<li><a data-toggle="tab" href="#dept">Vote by Function</a></li>
+					<li><a data-toggle="tab" href="#numb">Vote by Committee</a></li>
 				</ul>
 		</div><!-- container -->
 	</div><!-- blue wrap -->
 
 <div class="tab-content">
   <div id="cc" class="tab-pane fade in active">
-    <h3>Congress Committee</h3>
-    <p>Some content.</p>
+    <h3>Agency</h3>
+    <table class="table gtreetable" id="agencytable">
+		<thead><tr><th>Agency</th></tr></thead>
+		<tbody>
+			<tr></tr>
+		</tbody>
+    </table>
+    <p></p>
   </div>
   <div id="dept" class="tab-pane fade">
     <h3>Menu 1</h3>
@@ -189,6 +195,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="tree/bootstrap-gtreetable.js"></script>
     <script src="vote.js"></script>
   </body>
 </html>
