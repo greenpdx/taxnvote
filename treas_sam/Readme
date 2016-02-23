@@ -1,1 +1,42 @@
+This is the data for the US Budget. 
+
 https://www.sam.fms.treas.gov/sampublic/tasbetc.htm
+
+The CVS files are broken because Some rows are missing "Agency Name" column. 
+
+To fix this:
+Load the csv file into a spreadsheet. 
+Sort the data by "Effective Date".
+At the end of the data there are the bad rows.
+Insert a new column for "Agency Name"
+Save and import into database. 
+
+Created base tables for name and description forigen keys.
+
+There are 4 agency names that have multipule AID.
+ Department of the Treasury
+ Executive Office of the President
+ Corps of Engineers
+ Legislative Branch
+
+ aid |                  agency_name                   
+-----+------------------------------------------------
+  67 | Corps of Engineers
+  89 | Corps of Engineers
+  96 | Corps of Engineers
+
+ aid |            agency_name            
+-----+-----------------------------------
+  11 | Executive Office of the President
+ 381 | Executive Office of the President
+
+ aid |        agency_name         
+-----+----------------------------
+  20 | Department of the Treasury
+  99 | Department of the Treasury
+
+ aid |    agency_name     
+-----+--------------------
+   2 | Legislative Branch
+   9 | Legislative Branch
+
