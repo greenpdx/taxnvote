@@ -3,7 +3,7 @@ US Budget Tax Dollar
 
 ### See a Demo at [http://taxnvote.org]
 
-##### The source can be found at [https://github.com/greenpdx/GAMT]
+##### The source can be found at [https://github.com/greenpdx/tnvvue]
 
 In this politically turbulant times I think America should work together to find something most people agree with. They all want to say how their Tax Dollar is spent. 
 
