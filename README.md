@@ -1,9 +1,19 @@
 # TaxNVote
 US Budget Tax Dollar
 
-### See a Demo at [http://taxnvote.org]
+Look at washington now!! Look at the leadership. 
 
-##### The source can be found at [https://github.com/greenpdx/tnvvue]
+Let the People vote on how the money should be spent. 
+
+Tax N Vote(TNV)
+
+The United States is living month to month just like over 1/2 half of population is living today.
+
+When is the next crisis going to come? That is what the People of America are thinking.  
+
+[https://github.com/greenpdx/wealth-cbo]
+
+
 
 In this politically turbulant times I think America should work together to find something most people agree with. They all want to say how their Tax Dollar is spent. 
 
@@ -16,3 +26,8 @@ When People file their taxes the can submit a document the states their belief t
 The census data is published after every tax season the data is published to the state level,  Now people have a new voice into the government process 
 
 Using control theory to create a system by which to tax payer could suggest how their Tax Dollar is spent in the federal budget. This system would add a new feedback indicator in to the government process. Does not matter what side of the political spectrum the person is on, they the is a voice. Tax are paid every year so people vote every a year. It is a suggestion of what the budget the people would want.  greater government financial responsibility.
+
+### See a Demo at [http://taxnvote.org]
+
+##### The source can be found at [https://github.com/greenpdx/tnvvue]
+
